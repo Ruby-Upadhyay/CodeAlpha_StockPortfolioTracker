@@ -1,0 +1,8 @@
+19-08-26 23:21:26 - Bought 2 shares of MSFT at ₹300 each = ₹600
+19-08-26 23:21:45 - Bought 3 shares of AAPL at ₹150 each = ₹450
+19-08-26 23:22:07 - Sold 2 shares of AAPL at ₹150 each = ₹300
+19-08-26 23:28:36 - Bought 1 share of TSLA at ₹120 each = ₹120
+19-08-26 23:29:18 - Removed 1 share of AAPL at ₹150 each = ₹150
+19-08-26 23:29:52 - Bought 10 shares of GOOGL at ₹400 each = ₹4000
+19-08-26 23:30:07 - Sold 1 share of MSFT at ₹300 each = ₹300
+19-08-26 23:30:21 - Sold 4 shares of GOOGL at ₹400 each = ₹1600

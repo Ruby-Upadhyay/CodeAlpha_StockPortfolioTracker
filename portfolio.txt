@@ -1,0 +1,3 @@
+MSFT : 1 share
+TSLA : 1 share
+GOOGL : 6 shares

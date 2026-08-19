@@ -16,7 +16,8 @@ portfolio = {}
 def save_portfolio():
     with open("portfolio.txt", "w", encoding="utf-8") as file:
         for stock, quantity in portfolio.items():
-            file.write(f"{stock} : {quantity} shares\n")
+            share_text = "share" if quantity == 1 else "shares"
+            file.write(f"{stock} : {quantity} {share_text}\n")
 
 # Save buy, sell, and remove transactions with date, time, price, and total value
 def save_transaction(action, quantity, stock):
@@ -40,8 +41,9 @@ def load_portfolio():
             for line in file:
                 try:
                     stock, quantity = line.strip().split(" : ")
-                    quantity = int(quantity.replace(" shares", ""))
+                    quantity = int(quantity.split()[0])
                     portfolio[stock] = quantity
+
                 except ValueError:
                     print("Invalid line found. Skipping it.")
                     continue
@@ -102,7 +104,8 @@ def view_portfolio():
     for stock, quantity in portfolio.items():
         investment = quantity * stock_prices[stock]
         total_investment += investment
-        print(f"{stock} : {quantity} shares x ₹{stock_prices[stock]} = ₹{investment}")
+        share_text = "share" if quantity == 1 else "shares"
+        print(f"{stock} : {quantity} {share_text} x ₹{stock_prices[stock]} = ₹{investment}")
     print("Total portfolio value: ₹", total_investment)
 
 # Calculate and display portfolio statistics
@@ -207,7 +210,7 @@ while True:
     print("6. Transaction History")
     print("7. Portfolio Statistics")
     print("8. Exit")
-    menu_choice=input("Enter your choice: ")
+    menu_choice = input("Enter your choice: ")
 
     if menu_choice == "1":
         show_stocks()
