@@ -1,0 +1,4 @@
+portfolio.txt
+transactions.txt
+__pycache__/
+*.pyc
